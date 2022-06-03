@@ -197,5 +197,8 @@ alias cls='clear'
 alias showme="git config user.email | xargs -n1 -I {} git log --pretty=format:"%h - %an, %ar : %s" --since=2.weeks --no-merges  --author={}"
 alias adbc='adb logcat -c'
 
-
+# proxy
+export https_proxy=http://127.0.0.1:7890
+export http_proxy=http://127.0.0.1:7890
+export all_proxy=socks5://127.0.0.1:7890
 
