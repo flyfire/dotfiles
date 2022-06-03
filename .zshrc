@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # brew
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_EDITOR=vim
+source ~/.homebrew_token
 
 # ssh
 eval "$(ssh-agent -s >/dev/null 2>&1)"
@@ -201,4 +202,6 @@ alias adbc='adb logcat -c'
 export https_proxy=http://127.0.0.1:7890
 export http_proxy=http://127.0.0.1:7890
 export all_proxy=socks5://127.0.0.1:7890
+
+
 
