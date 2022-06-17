@@ -93,3 +93,5 @@ set history=100
 
 " bundle configuration
 " plugins: snippest,omnifocus,nerdtree,ctags,winmananger,cscope
+
+set rtp+=/opt/homebrew/opt/fzf
