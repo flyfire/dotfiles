@@ -108,6 +108,7 @@ source ~/.homebrew_token
 eval "$(ssh-agent -s >/dev/null 2>&1)"
 ssh-add --apple-use-keychain ~/.ssh/id_rsa.github >/dev/null 2>&1
 ssh-add --apple-use-keychain ~/.ssh/id_rsa.wumii >/dev/null 2>&1
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519_gitee >/dev/null 2>&1
 
 # path
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
@@ -207,3 +208,16 @@ export all_proxy=socks5://127.0.0.1:7890
 
 
 source /Users/houruhou/.config/broot/launcher/bash/br
+
+# autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+# gitignore
+# https://www.toptal.com/developers/gitignore/?templates=macos
+# https://docs.gitignore.io/install/command-line
+function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
