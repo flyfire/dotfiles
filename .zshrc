@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_EDITOR=vim
 source ~/.homebrew_token
+alias bu='brew update && brew upgrade $(brew list | grep --invert-match typora)'
 
 # ssh
 eval "$(ssh-agent -s >/dev/null 2>&1)"
