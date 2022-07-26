@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_EDITOR=vim
 source ~/.homebrew_token
-alias bu='brew update && brew upgrade $(brew list | grep -vE "typora|sogouinput")'
+alias bu='brew update && brew upgrade $(brew list | grep -vE "typora|sogouinput|dex2jar")'
 
 # ssh
 eval "$(ssh-agent -s >/dev/null 2>&1)"
@@ -121,6 +121,9 @@ export ADT_HOME="/Users/houruhou/Library/Android/sdk"
 export PATH=$ADT_HOME/tools:$ADT_HOME/platform-tools:$ADT_HOME/build-tools/32.0.0:$PATH
 #hierarchyviewer
 export ANDROID_HVPROTO=ddm
+
+# dex2jar
+export PATH="/opt/homebrew/Cellar/dex2jar/2.1/bin:$PATH"
 
 #locale
 LANG=en_US.UTF-8
